@@ -38,7 +38,6 @@ dependencies {
 
     // ML Kit 离线 OCR（拉丁/英文识别，不依赖网络）
     implementation 'com.google.mlkit:text-recognition:16.0.1'
-    implementation 'com.google.mlkit:text-recognition-common:16.0.1'
     // ML Kit 离线翻译（英→中，首次需联网下载模型，之后完全离线、国内可用）
     implementation 'com.google.mlkit:translate:17.0.3'
 }
