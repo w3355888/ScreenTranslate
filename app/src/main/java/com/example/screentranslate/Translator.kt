@@ -77,7 +77,7 @@ object Translator {
             }
     }
 
-    /** 单条翻译（FloatService 等旧调用兼容）。 */
+    /** 单条翻译入口。 */
     fun translate(text: String, onResult: (String) -> Unit) {
         if (text.isBlank()) { onResult(""); return }
         translateBatch(listOf(text)) { onResult(it.firstOrNull() ?: text) }

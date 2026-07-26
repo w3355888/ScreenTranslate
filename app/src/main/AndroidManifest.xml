@@ -3,8 +3,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
 
     <application
         android:allowBackup="true"
@@ -20,13 +18,7 @@
             </intent-filter>
         </activity>
 
-        <!-- 模式 B：截屏 OCR（可能被 Maya 防截屏拦截） -->
-        <service
-            android:name=".FloatService"
-            android:exported="false"
-            android:foregroundServiceType="mediaProjection" />
-
-        <!-- 模式 A（推荐）：无障碍点译，绕过防截屏 -->
+        <!-- 无障碍点译（推荐）：直接读界面文字翻译，绕过 Maya 的防截屏 -->
         <service
             android:name=".TranslateAccessibilityService"
             android:exported="false"
