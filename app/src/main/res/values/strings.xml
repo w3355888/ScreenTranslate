@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">屏幕翻译</string>
+    <string name="acc_service_desc">读取屏幕上的文字并离线翻译成中文（点悬浮球触发）。不截屏，可绕过银行类 App 的防截屏限制。</string>
+</resources>
