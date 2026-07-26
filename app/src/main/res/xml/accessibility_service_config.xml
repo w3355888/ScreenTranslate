@@ -2,8 +2,7 @@
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
     android:description="@string/acc_service_desc"
     android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
-    android:accessibilityFlags="flagRetrieveWindowContent"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows|flagIncludeNotImportantViews"
     android:canRetrieveWindowContent="true"
     android:canPerformGestures="false"
-    android:settingsActivityName="com.example.screentranslate.MainActivity"
     android:notificationTimeout="400" />
