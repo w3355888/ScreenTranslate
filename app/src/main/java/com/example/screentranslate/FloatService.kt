@@ -31,6 +31,7 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.text.TextRecognitionOptions
 import java.util.LinkedHashMap
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
@@ -178,7 +179,7 @@ class FloatService : Service() {
     }
 
     private fun runOcr(bitmap: Bitmap) {
-        val client = TextRecognition.getClient()
+        val client = TextRecognition.getClient(TextRecognitionOptions.DEFAULT_OPTIONS)
         val input = InputImage.fromBitmap(bitmap, 0)
         client.process(input).addOnSuccessListener { visionText ->
             val blocks = visionText.textBlocks
